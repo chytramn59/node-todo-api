@@ -7,6 +7,6 @@ const {User} = ('./../server/models/user');
 //     console.log(result);
 // });
 
-Todo.findByIdAndRemove('5ba86787b3a7b0543a930a1d').then((todo)=>{
+Todo.findByIdAndRemove('5ba893cbdc33e231d86ea175').then((todo)=>{
     console.log(todo);
 });
