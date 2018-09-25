@@ -3,13 +3,13 @@ const request = require('supertest');
 
 const {app} = require('./../server');
 const {Todo} = require('./../models/todo');
-const {objectID} = require('mongodb');
+const {ObjectID} = require('mongodb');
 
 const todos = [{
-    // _id :new objectID(),
+    // _id :new ObjectID(),
     text :'first test todo'
 },  {
-    // _id :new objectID(),
+    // _id :new ObjectID(),
     text:'second test todo'
 
 }];
@@ -78,4 +78,24 @@ describe('POST/todos',()=>{
     //         .end(done);
     //     });
     // });
+    // describe('DELETE/todos/:id',()=>{
+    //     it('should remove a todo',(done)=>{
+    //         var hexId = todos[1]._id.toHexString();
+    //         request(app)
+    //         .delete(`/todos/${hexId}`)
+    //         .expect(200)
+    //         .expect((res)=>{
+    //             expect(res.body.todo._id).toBe(hexId);
+    //         })
+    //         .end((err,res)=>{
+    //            if(err){
+    //                return done(err);
+    //            }
+    //            Todo.findById(hexId).then((todo)=>{
+    //                expect(todo).toNotExist();
+    //                done();
+    //            }).catch((e)=>done(e));
+    //         })
+    //     })
+    // })
 });
